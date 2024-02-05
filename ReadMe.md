@@ -8,6 +8,7 @@ The following pipeline describes the process I use to analyze publicly available
 
     Expression Matrix Construction: In order to generate the expression matrix required by FungiExpresZ, I have developed a custom script. This script takes the output from the previous steps and constructs the matrix, which serves as input for subsequent analyses.
 
+
 ## 1. collect RNAseq dataset
 updating ......
 
