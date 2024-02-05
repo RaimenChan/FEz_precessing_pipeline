@@ -1,12 +1,12 @@
 The following pipeline describes the process I use to analyze publicly available RNAseq data, which is required by FungiExpresZ:
 
-    Data Download: I utilize the prefetch and fastq-dump commands to download and decompress the RNAseq datasets. These commands allow me to obtain the raw reads needed for further analysis.
+Data Download: I utilize the prefetch and fastq-dump commands to download and decompress the RNAseq datasets. These commands allow me to obtain the raw reads needed for further analysis.
 
-    Mapping to the Genome: To align the raw reads with the reference genome, I employ the hisat2 tool. This step enables me to map the reads to their corresponding genomic locations, facilitating downstream analysis.
+Mapping to the Genome: To align the raw reads with the reference genome, I employ the hisat2 tool. This step enables me to map the reads to their corresponding genomic locations, facilitating downstream analysis.
 
-    Quantification of Gene Expression: Once the reads have been mapped, I utilize stringtie to calculate the Fragments Per Kilobase of transcript per Million mapped reads (FPKM) value. This metric provides an estimation of gene expression levels by normalizing for transcript length and library size.
+Quantification of Gene Expression: Once the reads have been mapped, I utilize stringtie to calculate the Fragments Per Kilobase of transcript per Million mapped reads (FPKM) value. This metric provides an estimation of gene expression levels by normalizing for transcript length and library size.
 
-    Expression Matrix Construction: In order to generate the expression matrix required by FungiExpresZ, I have developed a custom script. This script takes the output from the previous steps and constructs the matrix, which serves as input for subsequent analyses.
+Expression Matrix Construction: In order to generate the expression matrix required by FungiExpresZ, I have developed a custom script. This script takes the output from the previous steps and constructs the matrix, which serves as input for subsequent analyses.
 
 
 ## 1. collect RNAseq dataset
