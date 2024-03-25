@@ -14,16 +14,23 @@ In order to generate the expression matrix required by FungiExpresZ, I have deve
 
 ### Softwares / Tools
 The following softwares or tools are required:
+
 (1) SRA Toolkit
+
 (2) HISAT2
+
 (3) StringTie
+
 (4) Samtools
+
 (5) Snakemake
 
 Please make sure to install these tools before running snakemake.
 
+
+
 ## 1. Collect RNAseq data access number
-updating ......
+Please refer to the introduction slides.
 
 ## 2. Download genome fasta file and gff file
 For most fungi species, the genome information file could be downloaded from Fungidb
@@ -52,4 +59,11 @@ snakemake -s FungiExpresZ_paired_end.py --latency-wait 10 --keep-going --rerun-i
 
 ## 4. Selecting file according to mapping rate and construct an expression matrix
 
-updating ......
+Move all the 'sample_alignmentstat' files into one folder (e.g. alignmentstat) and all the 'sample.xls' files into another folder (e.g. expression) (including both single and paired end).
+
+pandas package is required.
+
+```
+python expression_matrix.py -alignmentstat_path alignmentstat -stringtie_path expression
+```
+
